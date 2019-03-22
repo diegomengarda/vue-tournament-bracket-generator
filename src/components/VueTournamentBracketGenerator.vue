@@ -6,14 +6,14 @@
     props: {
       bracketSize: {
         type: Number,
-        default: 16
+        default: 8
       },
       matchStyle: {
         type: Object,
         default: () => ({
           border: '2px solid green',
           width: '100%',
-          height: '40px',
+          height: '30px',
           position: 'relative'
         })
       }
