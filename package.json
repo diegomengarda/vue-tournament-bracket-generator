@@ -1,0 +1,24 @@
+{
+  "name": "vue-tournament-bracket-generator",
+  "version": "0.0.1",
+  "description": "Generate tournament brackets easily",
+  "main": "src/components/VueTournamentBracketGenerator.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegomengarda/vue-tournament-bracket-generator.git"
+  },
+  "keywords": [
+    "Vuejs",
+    "Javascript",
+    "Tournament Brackets"
+  ],
+  "author": "Diego Mengarda <diegormengarda@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegomengarda/vue-tournament-bracket-generator/issues"
+  },
+  "homepage": "https://github.com/diegomengarda/vue-tournament-bracket-generator#readme"
+}
