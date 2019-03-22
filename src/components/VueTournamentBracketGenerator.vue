@@ -1,5 +1,5 @@
 <script>
-  const defaultRounds = [128, 64, 32, 16, 8, 4, 2, 1]
+  const defaultRounds = [256, 128, 64, 32, 16, 8, 4, 2, 1]
 
   export default {
     name: 'vue-tournament-bracket-generator',
@@ -7,11 +7,20 @@
       bracketSize: {
         type: Number,
         default: 16
+      },
+      matchStyle: {
+        type: Object,
+        default: () => ({
+          border: '2px solid green',
+          width: '100%',
+          height: '40px',
+          position: 'relative'
+        })
       }
     },
     computed: {
       rounds () {
-        return defaultRounds.filter(rounds => rounds < this.bracketSize)
+        return defaultRounds.filter(rounds => rounds <= this.bracketSize)
       }
     }
   }
@@ -21,20 +30,12 @@
     <div class="tournament-brackets">
         <div class="bracket">
             <template v-for="round in rounds">
-                <div class="round" :class="['round-' + (round * 2)]">
+                <div class="round" :class="['round-' + round]">
                     <template v-for="match in round">
-                        <div class="match">
-                            <div class="match__content"></div>
-                        </div>
-                        <div class="match">
-                            <div class="match__content"></div>
-                        </div>
+                        <div class="match"><div class="match__content" :style="matchStyle"></div></div>
                     </template>
                 </div>
             </template>
-            <div class="round round-1">
-                <div class="match"><div class="match__content"></div></div>
-            </div>
         </div>
     </div>
 </template>
@@ -72,8 +73,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0px 10px;
-        padding: 30px 0;
+        margin: 0 10px;
+        padding: 6px 0;
         flex-grow: 1;
         position: relative;
     }
@@ -81,7 +82,7 @@
     .match::before {
         content: "";
         display: block;
-        height: 30px;
+        min-height: 30px;
         border-left: 2px solid purple;
         position: absolute;
         left: -10px;
@@ -114,13 +115,6 @@
         right: -10px;
         width: 10px;
         bottom: 50%;
-    }
-
-    .match__content {
-        border: 2px solid green;
-        width: 100%;
-        height: 20px;
-        position: relative;
     }
 
     .match__content::before {
