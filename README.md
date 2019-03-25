@@ -1,7 +1,7 @@
 # Vue Tournament Bracket Generator
 Generate tournament brackets easily
 
-![Example](https://github.com/diegomengarda/vue-tournament-bracket-generator/tree/master/docs/images/example.gif)
+![Example](https://s2.gifyu.com/images/example88d0f690296efddd.gif)
 
 ## Quick Start
 
