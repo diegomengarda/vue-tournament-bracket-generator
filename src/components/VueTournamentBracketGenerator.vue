@@ -29,10 +29,10 @@
 <template>
     <div class="tournament-brackets">
         <div class="bracket">
-            <template v-for="round in rounds">
-                <div class="round" :class="['round-' + round]">
-                    <template v-for="match in round">
-                        <div class="match"><div class="match__content" :style="matchStyle"></div></div>
+            <template v-for="(round, index) in rounds">
+                <div class="round" :key="index" :class="['round-' + round]">
+                    <template v-for="(match, matchIndex) in round">
+                        <div class="match" :key="matchIndex"><div class="match__content" :style="matchStyle"></div></div>
                     </template>
                 </div>
             </template>
