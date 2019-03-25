@@ -2,7 +2,7 @@
 
 Generate tournament brackets easily
 
-Demo: **[Click Here](https://determined-fermat-1c8a7f.netlify.com/)**
+Demo: **[Click Here](https://vue-tournament-bracket-generator.netlify.com)**
 
 ![Example](https://s2.gifyu.com/images/example88d0f690296efddd.gif)
 
